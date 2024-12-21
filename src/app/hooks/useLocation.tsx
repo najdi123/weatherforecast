@@ -60,7 +60,6 @@ export function useLocation() {
         autoClose: 5000,
         toastId: "location-error-toast",
       });
-      dismissToast();
       setLoading(false);
     }
   };
@@ -71,7 +70,7 @@ export function useLocation() {
       position: "top-right",
       autoClose: 2500,
     });
-    dismissToast();
+    toast.dismiss("location-error-toast");
   };
 
   return { location, error, loading, requestLocation };
